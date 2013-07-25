@@ -1,0 +1,9 @@
+# behat.yml
+default:
+  extensions:
+    Behat\MinkExtension\Extension:
+      base_url: 'http://localhost'
+      javascript_session: sahi
+      browser_name: phantomjs
+      sahi: ~
+      goutte: ~

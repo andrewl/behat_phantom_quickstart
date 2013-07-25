@@ -1,0 +1,17 @@
+{
+  "require": {
+      "behat/behat": "2.4.*@stable", 
+      "behat/mink": "1.4.*@stable", 
+      "behat/mink-extension": "*",
+      "behat/mink-goutte-driver": "*",
+      "behat/mink-sahi-driver": "*",
+      "sensiolabs/behat-page-object-extension": "*",
+      "phpspec/phpspec": "2.0.*@dev",
+      "bossa/phpspec2-expect": "dev-master"
+  },
+
+  "minimum-stability": "dev",
+  "config": {
+      "bin-dir": "bin/"
+    }
+}
