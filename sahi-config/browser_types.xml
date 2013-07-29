@@ -3,8 +3,8 @@
     <name>phantomjs</name>
     <displayName>PhantomJS</displayName>
     <icon>safari.png</icon>
-    <path>../phantomjs/phantomjs</path>
-    <options>--proxy=localhost:9999 ../phantom-sahi-bridge/phantom-sahi-bridge.js</options>
+    <path>../../phantomjs/phantomjs</path>
+    <options>--proxy=localhost:9999 ../../phantom-sahi-bridge/phantom-sahi-bridge.js</options>
     <processName>phantomjs</processName>
     <capacity>100</capacity>
     <useSystemProxy>false</useSystemProxy>
