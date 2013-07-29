@@ -1,3 +1,5 @@
+Congratulations, you've sucesfully installed Behat, Sahi and PhantomJS which enables you to do headerless behaviour-driven development testing. By default this has been installed in the quickstart subdirectory, but you can now move that directory to anywhere. To start the test carry out the following instructions:
+
 1. In another terminal window run sahi by going to sahi/bin directory and running sahi.sh, eg
 cd sahi/bin
 sh ./sahi.sh
