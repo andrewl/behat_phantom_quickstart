@@ -1,5 +1,5 @@
 #where we're going to install behat
-INSTALL_DIR=behat
+INSTALL_DIR=quickstart
 
 #sahi download URL
 SAHI_DOWNLOAD=http://sourceforge.net/projects/sahi/files/sahi-v44/sahi_20130429.zip/download
@@ -7,7 +7,7 @@ SAHI_DOWNLOAD=http://sourceforge.net/projects/sahi/files/sahi-v44/sahi_20130429.
 #phantom download
 PHANTOM_DOWNLOAD=https://phantomjs.googlecode.com/files/phantomjs-1.9.1-macosx.zip
 
-all: $(INSTALL_DIR) $(INSTALL_DIR)/sahi/bin/sahi.sh $(INSTALL_DIR)/phantomjs/phantomjs $(INSTALL_DIR)/phantom-sahi-bridge/phantom-sahi-bridge.js $(INSTALL_DIR)/sahi/userdata/config/browser_types.xml $(INSTALL_DIR)/behat/composer.json $(INSTALL_DIR)/behat/features/test/test.feature
+all: $(INSTALL_DIR) $(INSTALL_DIR)/sahi/bin/sahi.sh $(INSTALL_DIR)/phantomjs/phantomjs $(INSTALL_DIR)/phantom-sahi-bridge/phantom-sahi-bridge.js $(INSTALL_DIR)/sahi/userdata/config/browser_types.xml $(INSTALL_DIR)/behat/composer.json $(INSTALL_DIR)/behat/features/test/test.feature $(INSTALL_DIR)/readme.txt
 
 clean:
 	rm -rf $(INSTALL_DIR)
@@ -38,14 +38,15 @@ $(INSTALL_DIR)/behat/composer.json:
 $(INSTALL_DIR)/behat/bin/behat:
 	cd $(INSTALL_DIR)/behat; composer install
 
-$(INSTALL_DIR)/behat/features: $(INSTALL_DIR)/behat/bin/behat
-	cd $(INSTALL_DIR)/behat;  ./bin/behat --init
-
-$(INSTALL_DIR)/behat/behat.yml: $(INSTALL_DIR)/behat/features
+$(INSTALL_DIR)/behat/behat.yml: $(INSTALL_DIR)/behat/bin/behat
 	cp behat-config/behat.yml $(INSTALL_DIR)/behat
 
-$(INSTALL_DIR)/behat/features/test: $(INSTALL_DIR)/behat/behat.yml
-	mkdir $(INSTALL_DIR)/behat/features/test
-
-$(INSTALL_DIR)/behat/features/test/test.feature: $(INSTALL_DIR)/behat/features/test
+$(INSTALL_DIR)/behat/features/test/test.feature: $(INSTALL_DIR)/behat/behat.yml
+	mkdir -p $(INSTALL_DIR)/behat/features/test
 	cp test-feature/test.feature $(INSTALL_DIR)/behat/features/test
+
+$(INSTALL_DIR)/readme.txt: $(INSTALL_DIR)/behat/features/test
+	cp instructions/readme.txt $(INSTALL_DIR)
+	clear
+	echo "behat_phantom_quickstart installed into the $(INSTALL_DIR) directory"
+	cat $(INSTALL_DIR)/readme.txt

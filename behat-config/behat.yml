@@ -1,9 +1,16 @@
-# behat.yml
 default:
+
+  context:
+    class: Drupal\DrupalExtension\Context\DrupalContext
+
   extensions:
     Behat\MinkExtension\Extension:
-      base_url: 'http://localhost'
-      javascript_session: sahi
-      browser_name: phantomjs
+      base_url:  'http://www.google.com'
+      goutte:    ~
+      selenium2: ~
       sahi: ~
-      goutte: ~
+      default_session: sahi
+      browser_name: phantomjs
+
+    Drupal\DrupalExtension\Extension:
+      blackbox: ~
