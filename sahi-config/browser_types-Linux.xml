@@ -1,0 +1,12 @@
+<browserTypes>
+  <browserType>
+    <name>phantomjs</name>
+    <displayName>PhantomJS</displayName>
+    <icon>safari.png</icon>
+    <path>../../phantomjs-1.9.1-linux-x86_64/bin/phantomjs</path>
+    <options>--proxy=localhost:9999 ../../phantom-sahi-bridge/phantom-sahi-bridge.js</options>
+    <processName>phantomjs</processName>
+    <capacity>100</capacity>
+    <useSystemProxy>false</useSystemProxy>
+  </browserType>
+</browserTypes>
