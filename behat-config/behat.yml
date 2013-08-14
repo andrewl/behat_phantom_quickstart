@@ -5,12 +5,32 @@ default:
 
   extensions:
     Behat\MinkExtension\Extension:
-      base_url:  'http://www.google.com'
+      base_url: http://en.wikipedia.org
       goutte:    ~
       selenium2: ~
       sahi: ~
       default_session: sahi
-      browser_name: phantomjs
+      browser_name: firefox
 
     Drupal\DrupalExtension\Extension:
       blackbox: ~
+
+firefox:
+  extensions:
+    Behat\MinkExtension\Extension:
+      browser_name: firefox
+
+safari:
+  extensions:
+    Behat\MinkExtension\Extension:
+      browser_name: safari
+
+phantomjs:
+  extensions:
+    Behat\MinkExtension\Extension:
+      browser_name: phantomjs
+
+selenium:
+  extensions:
+    Behat\MinkExtension\Extension:
+      default_session: selenium2
