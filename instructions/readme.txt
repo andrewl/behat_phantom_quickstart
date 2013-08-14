@@ -11,3 +11,9 @@ cd behat
 ./bin/behat
 
 If all goes well Behat will run a simple test to look up 'BDD' in Google
+
+To run tests in different browsers there are a number of profiles configured. To run the test in Chrome use
+./bin/behat -p chrome
+
+In Safari
+./bin/behat -p safari
