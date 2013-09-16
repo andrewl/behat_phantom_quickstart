@@ -21,8 +21,6 @@ PHANTOM_DOWNLOAD_FILENAME=phantomjs-1.9.1-linux-x86_64.tar.bz2
 PHANTOM_EXTRACTION=tar -C $(INSTALL_DIR) -xjf $(INSTALL_DIR)/$(PHANTOM_DOWNLOAD_FILENAME)
 endif
 
-quickstart: $(INSTALL_DIR) sahi phantomjs selenium behat instructions
-
 all: $(INSTALL_DIR) sahi phantomjs selenium behat sauce_connect instructions
 
 clean:
