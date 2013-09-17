@@ -21,9 +21,7 @@ PHANTOM_DOWNLOAD_FILENAME=phantomjs-1.9.1-linux-x86_64.tar.bz2
 PHANTOM_EXTRACTION=tar -C $(INSTALL_DIR) -xjf $(INSTALL_DIR)/$(PHANTOM_DOWNLOAD_FILENAME)
 endif
 
-quickstart: $(INSTALL_DIR) sahi phantomjs selenium behat instructions
-
-all: $(INSTALL_DIR) sahi phantomjs selenium behat sauce_connect instructions
+all: $(INSTALL_DIR) sahi phantomjs selenium behat instructions
 
 clean:
 	rm -rf $(INSTALL_DIR)
@@ -74,9 +72,9 @@ $(INSTALL_DIR)/behat/composer.json:
 $(INSTALL_DIR)/behat/bin/behat: $(INSTALL_DIR)/behat/composer.json
 	cd $(INSTALL_DIR)/behat; curl http://getcomposer.org/installer | php; php composer.phar install
 
-#instructions
-$(INSTALL_DIR)/readme.txt: $(INSTALL_DIR)/behat/features/test
-	cp instructions/readme.txt $(INSTALL_DIR)
+#install and show instructions
+instructions: $(INSTALL_DIR)
+	cp README.md $(INSTALL_DIR)
 	clear
 	echo "behat_phantom_quickstart installed into the $(INSTALL_DIR) directory"
-	cat $(INSTALL_DIR)/readme.txt
+	cat $(INSTALL_DIR)/README.md
