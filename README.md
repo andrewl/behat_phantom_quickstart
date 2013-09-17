@@ -26,7 +26,7 @@ This project installs and configures the following components
 Requirements
 --------------------------------------------------------
 
-It's been tested on various flavours of Linux and OS/X. You'll need GNU Make, or similar and curl installed. Linux
+It's been tested on various flavours of Linux and OS/X. You'll need GNU Make, or similar and wget installed. Linux
 users will most likely already have these installed, OS/X can install them through Homebrew or MacPorts. You'll also need a recent (5.3 or later) flavour of PHP installed.
 
 
