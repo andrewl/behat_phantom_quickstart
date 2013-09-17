@@ -3,7 +3,6 @@ behat_phantom_quickstart
 
 A quickstart setup for installing and configuring Behat, Sahi, Selenium2 and Phantomjs.
 
-
 Why?
 ----
 
@@ -18,9 +17,9 @@ What's in the box?
 This project installs and configures the following components
 
 - Behat: a BDD testing framework, including Mink, a couple of example profiles and a sample test (http://www.behat.org)
-- Selenium2: a Java application which can control browsers (http://www.selenium.org)
+- Selenium2: a Java application which can control browsers (http://seleniumhq.org)
 - PhantomJS: a 'headerless' browser based on WebKit, functionally equivalent to Chrome (http://phantomjs.org)
-- Sahi Open-source: a Java application, similar to Selenium which can control PhantomJS (http://www.sahi.in)
+- Sahi Open-source: a Java application, similar to Selenium which can control PhantomJS (http://sahi.co.in)
 
 
 Requirements
