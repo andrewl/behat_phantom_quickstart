@@ -9,8 +9,6 @@ default:
       goutte:    ~
       selenium2: ~
       sahi: ~
-      default_session: sahi
-      browser_name: firefox
 
     Drupal\DrupalExtension\Extension:
       blackbox: ~
@@ -18,19 +16,17 @@ default:
 firefox:
   extensions:
     Behat\MinkExtension\Extension:
+      default_session: selenium2
       browser_name: firefox
 
 safari:
   extensions:
     Behat\MinkExtension\Extension:
+      default_session: sahi
       browser_name: safari
 
 phantomjs:
   extensions:
     Behat\MinkExtension\Extension:
+      default_session: sahi
       browser_name: phantomjs
-
-selenium:
-  extensions:
-    Behat\MinkExtension\Extension:
-      default_session: selenium2
