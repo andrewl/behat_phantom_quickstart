@@ -34,8 +34,8 @@ How do I get started?
 
 Change into the current directory type 'make' and hit return, eg
 
-cd /Users/myname/behat_phantom_quickstart
-make
+    cd /Users/myname/behat_phantom_quickstart
+    make
 
 The make program will then run, downloading the components and configuring them. After it's done you'll be 
 presented with this file.
@@ -47,14 +47,14 @@ This quickstart ships with a simple BDD story which opens wikipedia, searches fo
 text appears on the page. To test this in Firefox we first need to start Selenium, so open a new terminal
 window, change into the quickstart/selenium subdirectory and run java -jar selenium-server-standalone-2.34.0.jar, eg:
 
-cd /Users/myname/behat_phantom_quickstart/quickstart/selenium
-java -jar selenium-server-standalone-2.34.0.jar
+    cd /Users/myname/behat_phantom_quickstart/quickstart/selenium
+    java -jar selenium-server-standalone-2.34.0.jar
 
 Keep this window open and open another terminal window. In this window we'll run behat using the firefox profile. To do
 this change into the quickstart/behat subdirectory and run bin/behat -p firefox eg:
 
-cd /Users/myname/behat_phantom_quickstart/quickstart/behat
-bin/behat -p firefox
+    cd /Users/myname/behat_phantom_quickstart/quickstart/behat
+    bin/behat -p firefox
 
 You'll see firefox start up and carry out the steps in the story. When the story has finished, Firefox will close and you'll 
 see a list of steps that the story carried out and (hopefully) indication that they all passed!
@@ -67,14 +67,14 @@ Running in a browser is great, but there are many times when running BDD stories
 whilst running as part of a continuous integration suite. To run the same test in PhantomJSFirefox we first need to start Sahi,
 so open a new terminal window, change into the quickstart/sahi/bin subdirectory and sh ./sahi.sh eg:
 
-cd /Users/myname/behat_phantom_quickstart/sahi/bin
-sh ./sahi.sh
+    cd /Users/myname/behat_phantom_quickstart/sahi/bin
+    sh ./sahi.sh
 
 Keep this window open and open another terminal window. In this window we'll run behat using the phantomjs profile. To do
 this change into the quickstart/behat subdirectory and run bin/behat -p phantomjs eg:
 
-cd /Users/myname/behat_phantom_quickstart/quickstart/behat
-bin/behat -p phantomjs
+    cd /Users/myname/behat_phantom_quickstart/quickstart/behat
+    bin/behat -p phantomjs
 
 This runs through the same steps in the story, but because it's in a headerless browser you won't actually 'see' the browser
 doing anything. However, like we saw with firefox, when the story has finished, PhantomJS will close and you'll 
